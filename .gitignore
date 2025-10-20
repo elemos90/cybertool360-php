@@ -25,9 +25,13 @@ public/uploads/
 public/assets/uploads/
 
 # Backups
-*.sql
-*.sql.gz
 backups/
+backup_*.sql
+*.sql.gz
+*backup*.sql
+
+# Permitir SQL de migration e seed
+!database/*.sql
 
 # OS
 Thumbs.db

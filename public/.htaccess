@@ -4,9 +4,9 @@
 <IfModule mod_rewrite.c>
     RewriteEngine On
     
-    # Redireciona para HTTPS (opcional - descomente em produção)
-    # RewriteCond %{HTTPS} off
-    # RewriteRule ^(.*)$ https://%{HTTP_HOST}%{REQUEST_URI} [L,R=301]
+    # Redireciona para HTTPS (ATIVADO PARA PRODUÇÃO)
+    RewriteCond %{HTTPS} off
+    RewriteRule ^(.*)$ https://%{HTTP_HOST}%{REQUEST_URI} [L,R=301]
     
     # Se o arquivo ou diretório existe, serve diretamente
     RewriteCond %{REQUEST_FILENAME} !-f

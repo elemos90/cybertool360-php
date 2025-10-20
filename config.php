@@ -8,15 +8,15 @@
 
 // Configurações do Banco de Dados
 define('DB_HOST', 'localhost');
-define('DB_NAME', 'cybertool360');
-define('DB_USER', 'root');
-define('DB_PASS', '');
+define('DB_NAME', 'cycodene_cybertool360');
+define('DB_USER', 'cycodene_webapp');
+define('DB_PASS', 'Passw0rd2025');
 define('DB_CHARSET', 'utf8mb4');
 
 // Configurações da Aplicação
 define('APP_NAME', 'CyberTool360');
-define('APP_URL', 'http://localhost');
-define('APP_ENV', 'development'); // development | production
+define('APP_URL', 'https://cybertool360.cycode.net');
+define('APP_ENV', 'production'); // development | production
 
 // Segurança
 define('SESSION_LIFETIME', 7200); // 2 horas em segundos
