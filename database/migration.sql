@@ -1,11 +1,11 @@
 -- CyberTool360 - Database Migration
 -- Execute este script para criar o banco de dados e as tabelas necessárias
 
-CREATE DATABASE IF NOT EXISTS cybertool360
-  DEFAULT CHARACTER SET utf8mb4
-  DEFAULT COLLATE utf8mb4_0900_ai_ci;
+-- CREATE DATABASE IF NOT EXISTS cycodene_cybertool360
+--   DEFAULT CHARACTER SET utf8mb4
+--   DEFAULT COLLATE utf8mb4_0900_ai_ci;
 
-USE cybertool360;
+USE cycodene_cybertool360;
 
 -- Tabela de Usuários
 CREATE TABLE IF NOT EXISTS users (

@@ -125,7 +125,7 @@ class Security
             "object-src 'none'",
             "img-src 'self' data: https:",
             "style-src 'self' 'unsafe-inline' https://cdn.tailwindcss.com",
-            "script-src 'self' 'unsafe-inline' https://cdn.tailwindcss.com https://unpkg.com",
+            "script-src 'self' 'unsafe-inline' 'unsafe-eval' https://cdn.tailwindcss.com https://unpkg.com",
             "connect-src 'self' https:",
             "frame-src {$frameSrc}"
         ];
@@ -145,11 +145,11 @@ class Security
         header('X-Content-Type-Options: nosniff');
         header('Referrer-Policy: no-referrer-when-downgrade');
         
-        // CSP básico (permitindo Tailwind CDN e Alpine)
+        // CSP básico (permitindo Tailwind CDN, Alpine, e Lucide)
         $csp = [
             "default-src 'self'",
             "style-src 'self' 'unsafe-inline' https://cdn.tailwindcss.com",
-            "script-src 'self' 'unsafe-inline' https://cdn.tailwindcss.com https://unpkg.com",
+            "script-src 'self' 'unsafe-inline' 'unsafe-eval' https://cdn.tailwindcss.com https://unpkg.com",
             "img-src 'self' data: https:",
             "connect-src 'self' https:",
             "font-src 'self' data:",

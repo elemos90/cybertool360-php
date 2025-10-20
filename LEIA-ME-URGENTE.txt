@@ -1,0 +1,101 @@
+═══════════════════════════════════════════════════════════
+  CYBERTOOL360 - AÇÃO NECESSÁRIA URGENTE
+═══════════════════════════════════════════════════════════
+
+O QUE FAZER AGORA:
+==================
+
+Os erros no navegador ocorrem porque os arquivos atualizados
+ainda não foram enviados para o servidor.
+
+ARQUIVOS QUE PRECISAM SER ATUALIZADOS NO SERVIDOR:
+===================================================
+
+1. app/Helpers/Security.php      ← OBRIGATÓRIO (corrige CSP)
+2. public/sw.js                  ← OBRIGATÓRIO (corrige SW)
+3. public/clear-ratelimit.php    ← TEMPORÁRIO (desbloqueia)
+4. public/test-db.php            ← TEMPORÁRIO (diagnóstico)
+
+
+MÉTODO RÁPIDO - 5 MINUTOS:
+===========================
+
+VIA CPANEL:
+-----------
+1. Acesse cPanel → File Manager
+2. Navegue até: /public_html/cybertool360/
+
+3. UPLOAD DO SECURITY.PHP:
+   - Entre em: app/Helpers/
+   - Upload: Security.php (do seu computador)
+   - Substituir: SIM
+
+4. UPLOAD DO SW.JS:
+   - Volte para: public/
+   - Upload: sw.js (do seu computador)
+   - Substituir: SIM
+
+5. UPLOAD DOS SCRIPTS TEMPORÁRIOS:
+   - Na mesma pasta public/
+   - Upload: clear-ratelimit.php
+   - Upload: test-db.php
+
+
+TESTAR APÓS UPLOAD:
+===================
+
+1. LIMPAR CACHE:
+   - Feche TODOS os navegadores
+   - Reabra em modo privado/anônimo
+   - Ou pressione: Ctrl+Shift+R
+
+2. DESBLOQUEAR LOGIN:
+   - Acesse: https://cybertool360.cycode.net/clear-ratelimit.php
+   - Clique em "Fazer Login"
+
+3. FAZER LOGIN:
+   - Email: admin@cybercode360.com
+   - Senha: admin123
+
+4. VERIFICAR CONSOLE (F12):
+   - NÃO deve ter erros de CSP
+   - Ícones devem aparecer
+   - Dark mode deve funcionar
+
+
+SE AINDA HOUVER ERROS:
+======================
+
+1. Verifique se os arquivos foram realmente substituídos:
+   - cPanel → File Manager → Veja data de modificação
+
+2. Limpe cache do servidor:
+   - cPanel → Select PHP Version → Reset OPcache
+
+3. Desregistre Service Worker:
+   - F12 → Aba Application → Service Workers → Unregister
+   - Feche e reabra o navegador
+
+
+APÓS TUDO FUNCIONAR:
+====================
+
+DELETE estes arquivos do servidor:
+- public/clear-ratelimit.php
+- public/test-db.php
+- FIX-LOGIN.md
+- CSP-FIX.md
+- UPLOAD-GUIDE.md
+- LEIA-ME-URGENTE.txt
+
+
+DOCUMENTAÇÃO COMPLETA:
+======================
+
+Para instruções detalhadas, veja:
+→ UPLOAD-GUIDE.md
+
+
+═══════════════════════════════════════════════════════════
+  RESUMO: Faça upload dos 4 arquivos acima e teste!
+═══════════════════════════════════════════════════════════

@@ -1,0 +1,68 @@
+ARQUIVOS PARA FAZER UPLOAD AGORA
+=====================================
+
+📁 Estrutura no Servidor:
+/public_html/cybertool360/
+
+
+✅ OBRIGATÓRIOS (corrigem erros de CSP):
+-----------------------------------------
+
+1. app/Helpers/Security.php
+   └─ Caminho no servidor: /public_html/cybertool360/app/Helpers/Security.php
+   └─ Ação: SUBSTITUIR arquivo existente
+   └─ Mudança: Adiciona 'unsafe-eval' ao CSP
+
+2. public/sw.js
+   └─ Caminho no servidor: /public_html/cybertool360/public/sw.js
+   └─ Ação: SUBSTITUIR arquivo existente
+   └─ Mudança: Corrige erro no Service Worker
+
+
+⏰ TEMPORÁRIOS (para testes - deletar depois):
+-----------------------------------------------
+
+3. public/clear-ratelimit.php
+   └─ Caminho no servidor: /public_html/cybertool360/public/clear-ratelimit.php
+   └─ Ação: CRIAR novo arquivo
+   └─ Função: Desbloqueia tentativas de login
+
+4. public/test-db.php
+   └─ Caminho no servidor: /public_html/cybertool360/public/test-db.php
+   └─ Ação: CRIAR novo arquivo
+   └─ Função: Testa conexão ao banco de dados
+
+
+📋 ORDEM DE UPLOAD RECOMENDADA:
+================================
+
+1º - Security.php      (corrige CSP)
+2º - sw.js             (corrige Service Worker)
+3º - clear-ratelimit.php (desbloqueia login)
+4º - test-db.php       (diagnóstico)
+
+
+🎯 APÓS O UPLOAD:
+=================
+
+1. Limpar cache do navegador (Ctrl+Shift+R)
+2. Acessar: /clear-ratelimit.php
+3. Fazer login: admin@cybercode360.com / admin123
+4. Deletar arquivos temporários (3 e 4)
+
+
+✅ SUCESSO QUANDO:
+==================
+
+✓ Página /signin carrega sem erros no console (F12)
+✓ Ícones aparecem corretamente
+✓ Dark mode funciona
+✓ Login funciona com credenciais corretas
+✓ Dashboard aparece após login
+
+
+📞 PROBLEMAS?
+=============
+
+→ Veja: UPLOAD-GUIDE.md (instruções detalhadas)
+→ Veja: LEIA-ME-URGENTE.txt (resumo rápido)

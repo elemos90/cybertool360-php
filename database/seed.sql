@@ -1,7 +1,7 @@
 -- CyberTool360 - Database Seed
 -- Dados iniciais para demonstração
 
-USE cybertool360;
+USE cycodene_cybertool360;
 
 -- Usuário Admin (senha: admin123)
 INSERT INTO users (id, email, password_hash, name, role) VALUES

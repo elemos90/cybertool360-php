@@ -65,7 +65,8 @@ self.addEventListener('fetch', (event) => {
   }
   
   // Network-first para API e HTML
-  if (request.method === 'POST' || request.url.includes('/api/') || request.headers.get('accept').includes('text/html')) {
+  const acceptHeader = request.headers.get('accept') || '';
+  if (request.method === 'POST' || request.url.includes('/api/') || acceptHeader.includes('text/html')) {
     event.respondWith(
       fetch(request)
         .then((response) => {
