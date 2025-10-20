@@ -1,0 +1,47 @@
+# CyberTool360 - GitIgnore
+
+# Environment & Config
+config.local.php
+.env
+.env.local
+
+# IDE
+.vscode/
+.idea/
+*.sublime-*
+.DS_Store
+
+# Logs
+logs/
+*.log
+
+# Temporary files
+tmp/
+temp/
+cache/
+
+# Uploaded files
+public/uploads/
+public/assets/uploads/
+
+# Backups
+*.sql
+*.sql.gz
+backups/
+
+# OS
+Thumbs.db
+.DS_Store
+
+# PHP
+vendor/
+composer.lock
+
+# Node (caso adicione no futuro)
+node_modules/
+package-lock.json
+yarn.lock
+
+# Build (caso adicione no futuro)
+dist/
+build/
